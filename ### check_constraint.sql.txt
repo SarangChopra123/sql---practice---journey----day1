@@ -1,0 +1,9 @@
+### check_constraint.sql
+
+CREATE TABLE student 
+(
+ id int primary key ,
+ name varchar(100),
+ status varchar(20) CHECK (status IN ('active', 'inactive')),
+ age int CHECK (age=10 OR age=12)
+);
